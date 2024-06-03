@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="399" viewBox="0 0 460 399">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.8;
+      }
+
+      .cls-2 {
+        fill: #f7f9fc;
+      }
+
+      .cls-3 {
+        fill: #3ebbdd;
+      }
+
+      .cls-4 {
+        fill: #e2e6ed;
+      }
+    </style>
+  </defs>
+  <title>Asset 2</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g class="cls-1">
+        <g id="Layer_1-2-2" data-name="Layer 1-2">
+          <rect class="cls-2" width="460" height="399" rx="12"/>
+          <rect class="cls-3" y="36" width="460" height="217"/>
+          <circle class="cls-4" cx="21.5" cy="18.5" r="6.5"/>
+          <circle class="cls-4" cx="41.5" cy="18.5" r="6.5"/>
+          <circle class="cls-4" cx="61.5" cy="18.5" r="6.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

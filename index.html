@@ -1,118 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/e127d3c3c7.js" crossorigin="anonymous"></script>
-        
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        
-        <link href="https://fonts.googleapis.com/css2?family=PlayfairDisplay&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cristina Grosso • Front-End Dev</title>
+  <meta name="author" content="Cristina Grosso">
+  <meta name="description" content="I'm Cristina, a Front-End Developer.">
+</head>
 
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-        
+<body>
 
-        <!-- Icons -->
-        <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <script src="app.js"></script>
 
-        <link rel="stylesheet" href="styles.css" />
-        <title>Cristina Coding</title>
-        <meta name="author" content="Cristina Grosso" />
-        <meta name="description" content="Cristina Coding Website" />
-    </head>
+  <noscript>
+    <span id="logo">cristinacoding</span>
+    This site requires Javascript to work, please enable Javascript in your browser or use a browser with Javascript
+    support.
+  </noscript>
 
-    <body>
-        <script src="app.js"></script>
-        <noscript>
-            <h1>cristinacoding</h1>
-            This site requires Javascript to work, please enable Javascript in your browser or use a browser with Javascript support.
-        </noscript>
-            <header>
-                <h1 class="box logo" id="logo">cristinacoding</h1>
-                <nav class="box" id="burguer">
-                    <button id="navigation-slide-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="navigation-slide">menu</button>
-                    <ul class="menu">
-                        <li><a href="aboutme.html">resume</a></li>
-                        <li><a href="aboutme.html">resume</a></li>
-                        <li><a href="aboutme.html">resume</a></li>
-                    </ul>
-                </nav>
-            </header>
+  <nav role="navigation" aria-label="Main Menu">
+    <div id="overlay" aria-hidden="true" role="menu">
+      <ul id="navigationList">
+        <li><a href="https://github.com/cristinacoding" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/cristinacoding" target="_blank">LinkedIn</a></li>
+        <li><a href="#">CV</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <section class="box" id="hello">
-                <h2 id="helloText">
-                Hi!                 
-                <br />I'm Cristina,
-                <br />Front-End <span id="wordChange">Dev.</span>
-                </h2>
-            </section>
 
-            <section class="box boxWhite" id="intro">
-                <h3>Nice to meet you.</h3>
-                I like minimalism and creating simple designs.
-                <br />I grew up designing and coding my neopets' pages. 
-                <br />I'm also very into home decor and organizing my space and making it cozy.
-                <br />
-                <br />
-                
-                <h3>Skills</h3>
-                <ul class="skill">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-                <li>Figma</li>
-                <li>Photoshop</li>
-                <li>Mobile first</li>
-                </ul>
-            </section>
+  <div id="content">
+    <header id="header">
+      <span id="logo">cristinacoding</span>
+      <div id="hamburguer">
+        <button id="hamburguerButton" aria-haspopup="true" aria-expanded="false" aria-label="Menu Button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="currentColor" />
+            <path d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z" fill="currentColor" />
+            <path d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z" fill="currentColor" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
-            <section class="box boxWhite">
-                <h3>Projects</h3>
-                <div class="projectWrapper">
-                <div class="project">
-                <h4 class="projectTitle">beaniebyte.github.io</h4>
-                </div>
+    <section id="hello">
+      <span>Hi<span class="notoEmoji"> 👋</span></span>
+      <h1>I'm Cristina, <br>Front-End Developer.</h1>
+    </section>
 
-                <div class="project">
-                <h4 class="projectTitle">BeanieByte</h4>
-                </div>
-                </div>
-            </section>
+    <section id="intro">
+      <h2>Nice to meet you</h2>
+      I'm passionate about crafting simple, aesthetically pleasing websites with a mobile-first approach. Skilled in
+      creating user-friendly designs that seamlessly adapt to any device.
 
-            <footer class="box boxWhite">
-                <div class="footerColumn">
-                <h3>Contact</h3>
-                <ul class="footerList">
-                <li>cristinacoding@gmail.com</li>
-                </ul>
-                </div>
+      <p>Right now I'm into customizing my pc setup, home decor and organizing my space and making it cozy.</p>
+    </section>
 
-                <div class="footerColumn">
-                <h3>Find me</h3>
-                <ul class="footerList">
-                <li><a href="">twitter</a></li>
-                    <li>github</li>
-                    <li>linkedin</li>
-                </ul>
-                </div>
-            </footer>
-    </body>
+    <section>
+      <h2>Skills</h2>
+      <ul class="skill">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>Tailwind CSS</li>
+        <li>Figma</li>
+        <li>Illustrator</li>
+        <li>Photoshop</li>
+        <li>Elementor</li>
+        <li>Mobile First</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="projectsWrapper">
+        <a href="https://tiny-meringue-6676a3.netlify.app/" target="_blank">
+          <div class="projectCard">
+            <div class="projectDescription">
+              <h3>Aquarius</h3>
+              <span>Simple responsive website made with HTML, CSS and Bootstrap.</span>
+            </div>
+          </div>
+        </a>
+    </section>
+
+    <section id="contact">
+      <div>
+        <h2>Shoot me an email</h2>
+        <ul class="footerList">
+          <li>cristinacoding@gmail.com</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Socials</h2>
+        <ul>
+          <li>
+            <a href="https://twitter.com/cristinacoding" target="_blank">twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/cristinacoding" target="_blank">github</a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/cristinacoding" target="_blank">linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span>Designed & Developed by <br>Cristina Grosso <span class="notoEmoji">🤍</span> 2024</span>
+    </footer>
+  </div>
+</body>
+
 </html>
