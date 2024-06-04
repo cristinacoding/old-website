@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Split the children into two groups: the first two elements and the rest
     const [firstTwo, rest] = [Array.from(boxes).slice(0, 2), Array.from(boxes).slice(2)];
     animateTogether(firstTwo, 0);
-    setTimeout(() => animateTogether(rest, 0), 200);
+    setTimeout(() => animateTogether(rest, 0), 300);
     rest[rest.length - 1].addEventListener("animationend", sparkleAppear);
   }
 
@@ -32,19 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function sparkleAppear() {
     document.getElementById("hello").style.backgroundSize = "20%";
   }
-
-  // Update hello text based on screen width
-  function updateHello() {
-    let h1 = document.querySelector("h1");
-
-    if (window.innerWidth <= 600) {
-      h1.innerHTML = "I'm Cristina, <br>Front-End Dev.";
-    } else {
-      h1.innerHTML = "I'm Cristina, <br>Front-End Developer.";
-    }
-  }
-  updateHello();
-  window.addEventListener("resize", updateHello);
 
   // Add click event listener to menuIcon
   menuIcon.addEventListener("click", function () {
