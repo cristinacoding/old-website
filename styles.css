@@ -3,13 +3,13 @@
   --globalFontColor: #3f3f52;
 
   --helloFont: "Source Code Pro";
-  --helloColor: #6e8cc4;
+  --helloColor: #98a0cb;
 
   --logoFont: "Source Code Pro";
-  --logoFontColor: #3f3f52dc;
+  --logoFontColor: #3f3f52e5;
 
   --boxBGColor: 255, 255, 255;
-  --boxBorderRadius: 20px;
+  --boxBorderRadius: 16px;
 
   --pageBGColor: #dcdee4;
   --navFontColor: #34384d;
@@ -65,8 +65,8 @@ body {
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  -webkit-text-size-adjust: none; /* stops mobile browser from scaling text on landscape */
+  text-size-adjust: none; /* stops mobile browser from scaling text on landscape */
 }
 
 #content {
@@ -91,22 +91,25 @@ footer {
   flex-direction: column;
   box-sizing: border-box;
   margin: 0 1rem;
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: var(--boxBorderRadius);
-  background-color: rgba(var(--boxBGColor), 0.8);
-  box-shadow: 0px 4px 14px -8px rgba(28, 28, 77, 0.178);
+  background-color: rgba(var(--boxBGColor), 0.85);
+  box-shadow: 0px 3px 12px -8px rgba(28, 28, 77, 0.14);
+  & p {
+    margin-bottom: 0;
+  }
 }
 
 /*-------------headings-------------*/
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-top: 0;
-  margin-bottom: 1.4rem;
-  font-weight: 600;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0;
 }
@@ -116,7 +119,7 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.9rem 1.4rem;
+  padding: 0.8rem 1.2rem;
   border-radius: calc(var(--boxBorderRadius) - 4px);
   overflow: visible;
 }
@@ -149,7 +152,7 @@ h3 {
   opacity: 0;
   display: none;
   position: fixed;
-  background-color: rgba(77, 83, 131, 0.541);
+  background-color: rgba(102, 106, 141, 0.541);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 1000;
@@ -167,28 +170,25 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
-}
-
-#navigationList li {
-  margin: 0;
-  padding: 0;
-}
-
-#navigationList li a {
-  display: block;
-  color: var(--globalFontColor);
-  padding: 1rem;
-  width: 120px;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border-radius: calc(var(--boxBorderRadius) - 14px);
-  background-color: rgba(var(--boxBGColor), 0.85);
-  box-shadow: 0px 4px 12px -8px rgba(24, 24, 61, 0.575);
-}
-
-#navigationList li a:hover {
-  background-color: rgba(var(--boxBGColor), 1);
+  & li {
+    margin: 0;
+    padding: 0;
+  }
+  & li a {
+    display: block;
+    color: var(--globalFontColor);
+    padding: 1rem;
+    width: 120px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: calc(var(--boxBorderRadius) - 10px);
+    background-color: rgba(var(--boxBGColor), 0.85);
+    box-shadow: 0px 4px 10px -8px rgba(24, 24, 61, 0.4);
+  }
+  & li a:hover {
+    background-color: rgba(var(--boxBGColor), 1);
+  }
 }
 
 a,
@@ -256,7 +256,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border-radius: 14px;
+  border-radius: calc(var(--boxBorderRadius) - 4px);
   box-sizing: border-box;
   height: clamp(17rem, 16.2473rem + 4.3011vw, 19rem);
   overflow: hidden;
@@ -266,13 +266,13 @@ a:visited {
   background: url(images/aquarius.svg) no-repeat, linear-gradient(110deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%);
   background-size: cover;
   background-position: top 50px left 50px, top;
-  box-shadow: 0px 4px 10px -2px rgba(19, 19, 56, 0.06);
+  box-shadow: 0px 3px 9px -2px rgba(19, 19, 56, 0.06);
   transition: 200ms ease-out;
   border: 0.5px solid rgb(240, 240, 245);
 }
 
 .projectCard:hover {
-  box-shadow: 0px 4px 13px -2px rgba(19, 19, 56, 0.14);
+  box-shadow: 0px 3px 12px -2px rgba(19, 19, 56, 0.12);
   background-position: top 50px left 80px, top;
 }
 
