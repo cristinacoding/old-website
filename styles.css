@@ -1,9 +1,9 @@
 :root {
-  --globalFont: "Source Code Pro";
+  --globalFont: "Inter";
   --globalFontColor: #3f3f52;
 
   --helloFont: "Source Code Pro";
-  --helloColor: #98a0cb;
+  --helloColor: #9898cb;
 
   --logoFont: "Source Code Pro";
   --logoFontColor: #3f3f52e5;
@@ -13,8 +13,34 @@
 
   --pageBGColor: #dcdee4;
   --navFontColor: #34384d;
-  --selectionColor: rgba(242, 226, 229, 1);
-  --linkUnderlineColor: rgb(230, 206, 210);
+  --selectionColor: #ffeedb;
+  --linkUnderlineColor: #ffeedb;
+
+  --gradient: 95deg, #e1dcf9 0%, #ffeedb 100%;
+
+  --sb-track-color: #ffeedb;
+  --sb-thumb-color: #3c3c5e44;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 noscript {
@@ -36,12 +62,13 @@ html {
   min-height: 100%;
   min-width: fit-content;
   background: #d6e4fc;
-  background: repeat-y url(images/wave.svg) top left, -moz-linear-gradient(95deg, #d6e4fc 0%, #f2e2e5 100%);
-  background: repeat-y url(images/wave.svg) top left, -webkit-linear-gradient(95deg, #d6e4fc 0%, #f2e2e5 100%);
-  background: repeat-y url(images/wave.svg) top left, linear-gradient(95deg, #d6e4fc 0%, #f2e2e5 100%);
+  background: repeat-y url(images/wave.svg) top left, -moz-linear-gradient(var(--gradient));
+  background: repeat-y url(images/wave.svg) top left, -webkit-linear-gradient(var(--gradient));
+  background: repeat-y url(images/wave.svg) top left, linear-gradient(var(--gradient));
   scroll-behavior: smooth;
   background-size: 65%, 100%;
   background-attachment: fixed, fixed;
+  cursor: default;
 }
 
 #content,
@@ -91,21 +118,24 @@ footer {
   flex-direction: column;
   box-sizing: border-box;
   margin: 0 1rem;
-  padding: 1.8rem;
+  padding: 2.2rem;
   border-radius: var(--boxBorderRadius);
   background-color: rgba(var(--boxBGColor), 0.85);
   box-shadow: 0px 3px 12px -8px rgba(28, 28, 77, 0.14);
   & p {
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
 /*-------------headings-------------*/
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 0;
-  margin-bottom: 1.1rem;
-  font-weight: 700;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-family: var(--helloFont);
+  color: var(--helloColor);
+  letter-spacing: -0.05rem;
 }
 
 h3 {
@@ -119,9 +149,10 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.2rem;
+  padding: 0.7rem 1.2rem;
   border-radius: calc(var(--boxBorderRadius) - 4px);
   overflow: visible;
+  z-index: 1001;
 }
 
 #logo {
@@ -133,15 +164,43 @@ h3 {
   padding: 0.5rem;
 }
 
+#hamburguer {
+  width: fit-content;
+  height: fit-content;
+}
+
 #hamburguer button {
-  background: none;
   border: none;
+  background-color: transparent;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.7em;
+  transition: 200ms ease-in-out 50ms;
+  border-radius: 100px;
+}
+
+#hamburguer button:hover {
+  background-color: #ffedce;
+}
+
+#icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#icon span {
+  height: 2px;
+  width: 20px;
+  background: #34384d;
 }
 
 #overlay {
@@ -152,9 +211,9 @@ h3 {
   opacity: 0;
   display: none;
   position: fixed;
-  background-color: rgba(102, 106, 141, 0.541);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background-color: #9289b67e;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   z-index: 1000;
   align-items: center;
   justify-content: center;
@@ -169,7 +228,7 @@ h3 {
   padding: 1.3rem;
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
+  gap: 2rem;
   & li {
     margin: 0;
     padding: 0;
@@ -177,17 +236,18 @@ h3 {
   & li a {
     display: block;
     color: var(--globalFontColor);
-    padding: 1rem;
+    padding: 0.9rem;
     width: 120px;
     font-size: 1rem;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    border-radius: calc(var(--boxBorderRadius) - 10px);
+    transition: 200ms ease-in-out;
+    border-radius: 100px;
     background-color: rgba(var(--boxBGColor), 0.85);
-    box-shadow: 0px 4px 10px -8px rgba(24, 24, 61, 0.4);
+    box-shadow: 0px 3px 10px -8px rgba(24, 24, 61, 0.274);
   }
   & li a:hover {
     background-color: rgba(var(--boxBGColor), 1);
+    transform: scale(1.06);
   }
 }
 
@@ -209,8 +269,9 @@ a:visited {
   transition: background-size 200ms ease-in-out 200ms;
   & span,
   h1 {
+    font-family: var(--helloFont);
     text-align: center;
-    font-size: clamp(1.6rem, 1.2557rem + 1.9672vw, 3.1rem);
+    font-size: clamp(1.6rem, 1.0355rem + 3.2258vw, 3.1rem);
     font-weight: 900;
     letter-spacing: -0.1rem;
     color: var(--helloColor);
@@ -218,8 +279,10 @@ a:visited {
   }
 }
 
-.notoEmoji {
-  font-family: "Noto Emoji", sans-serif;
+/*-------------intro-------------*/
+
+#intro p {
+  line-height: 1.4rem;
 }
 
 /*-------------skills-------------*/
@@ -228,7 +291,8 @@ a:visited {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  row-gap: 1rem;
+  column-gap: 0.6rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -236,13 +300,14 @@ a:visited {
 
 .skill li {
   background: rgb(218, 232, 254);
-  background: -moz-linear-gradient(150deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%) center center;
-  background: -webkit-linear-gradient(150deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%) center center;
-  background: linear-gradient(150deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%) center center;
-  background-size: 220%;
+  background: -moz-linear-gradient(var(--gradient)) center center;
+  background: -webkit-linear-gradient(var(--gradient)) center center;
+  background: linear-gradient(var(--gradient)) center center;
+  background-size: 280%;
   font-weight: 400;
-  padding: 0.4rem;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  cursor: default;
 }
 
 /*-------------projects-------------*/
@@ -261,11 +326,11 @@ a:visited {
   height: clamp(17rem, 16.2473rem + 4.3011vw, 19rem);
   overflow: hidden;
   background: rgb(218, 232, 254);
-  background: url(images/aquarius.svg) no-repeat, -moz-linear-gradient(110deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%);
-  background: url(images/aquarius.svg) no-repeat, -webkit-linear-gradient(110deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%);
-  background: url(images/aquarius.svg) no-repeat, linear-gradient(110deg, rgba(218, 232, 254, 1) 0%, rgba(242, 226, 229, 1) 100%);
-  background-size: cover;
-  background-position: top 50px left 50px, top;
+  background: url(images/aquarius.svg) no-repeat, -moz-linear-gradient(var(--gradient));
+  background: url(images/aquarius.svg) no-repeat, -webkit-linear-gradient(var(--gradient));
+  background: url(images/aquarius.svg) no-repeat, linear-gradient(var(--gradient));
+  background-size: cover, 200%;
+  background-position: top 50px left 50px, center center;
   box-shadow: 0px 3px 9px -2px rgba(19, 19, 56, 0.06);
   transition: 200ms ease-out;
   border: 0.5px solid rgb(240, 240, 245);
@@ -297,9 +362,12 @@ a:visited {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     & li {
-      border-bottom: 2px solid var(--linkUnderlineColor);
+      border-bottom: 6px solid var(--linkUnderlineColor);
       width: fit-content;
     }
   }
@@ -314,7 +382,6 @@ footer {
   padding: 1rem 0;
   & span {
     text-align: center;
-    font-size: 0.9rem;
     user-select: none;
   }
 }
@@ -349,20 +416,6 @@ a::selection {
   }
 }
 
-@media only screen and (min-width: 2560px) {
-  #content,
-  input,
-  textarea,
-  button,
-  p,
-  span {
-    font-family: var(--globalFont);
-    color: var(--globalFontColor);
-    font-size: 1rem;
-    font-weight: 400;
-  }
-}
-
 /*----------animations----------*/
 
 @keyframes fadeSlideDown {
@@ -378,5 +431,3 @@ a::selection {
     filter: blur(0px);
   }
 }
-
-/*cristina/*coding<img src="images/cristinacodinglogo.svg" class="logo" alt="Cristina Coding Logo" title="Cristina Coding Logo">*/

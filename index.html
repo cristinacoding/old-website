@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- viewport-fit=cover fixes removes white safe area around website on iphone safari--> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- viewport-fit=cover fixes removes white safe area around website on iphone safari-->
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -36,7 +37,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cristina Grosso — Frontend Developer">
   <meta property="og:description" content="Portfolio of Cristina Grosso, Frontend Developer.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/cristinacoding/cristinacoding.github.io/main/images/og.png">
+  <meta property="og:image" content="https://raw.githubusercontent.com/cristinacoding/cristinacoding.github.io/main/og.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -44,7 +45,7 @@
   <meta property="twitter:url" content="https://cristinacoding.github.io">
   <meta name="twitter:title" content="Cristina Grosso — Frontend Developer">
   <meta name="twitter:description" content="Portfolio of Cristina Grosso, Frontend Developer.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/cristinacoding/cristinacoding.github.io/main/images/og.png">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/cristinacoding/cristinacoding.github.io/main/og.png">
 </head>
 
 <body>
@@ -60,9 +61,10 @@
   <nav role="navigation" aria-label="Main Menu">
     <div id="overlay" aria-hidden="true" role="menu">
       <ul id="navigationList">
+        <li><a href="#">CV</a></li>
         <li><a href="https://github.com/cristinacoding" target="_blank">GitHub</a></li>
         <li><a href="https://linkedin.com/in/cristinacoding" target="_blank">LinkedIn</a></li>
-        <li><a href="#">CV</a></li>
+        <li><a href="https://linkedin.com/in/cristinacoding" target="_blank">Email me</a></li>
       </ul>
     </div>
   </nav>
@@ -73,24 +75,24 @@
       <span id="logo">cristinacoding</span>
       <div id="hamburguer">
         <button id="hamburguerButton" aria-haspopup="true" aria-expanded="false" aria-label="Menu Button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="currentColor" />
-            <path d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z" fill="currentColor" />
-            <path d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z" fill="currentColor" />
-          </svg>
+          <div id="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
       </div>
     </header>
 
     <section id="hello">
-      <span>Hi 👋</span>
+      <span>Hi!</span>
       <h1>I'm Cristina, <br>Frontend Developer.</h1>
     </section>
 
     <section id="intro">
       <h2>Nice to meet you</h2>
-      I'm passionate about crafting simple, aesthetically pleasing websites with a mobile-first approach. Skilled in
-      creating user-friendly designs that seamlessly adapt to any device.
+      <p>I'm passionate about crafting simple, aesthetically pleasing websites with a mobile-first approach. Skilled in
+      creating user-friendly designs that seamlessly adapt to any device.</p>
 
       <p>Right now I'm into customizing my pc setup, home decor and organizing my space and making it cozy.</p>
     </section>
@@ -126,24 +128,12 @@
 
     <section id="contact">
       <div>
-        <h2>Shoot me an email</h2>
+        <h2>Get in touch</h2>
         <ul class="footerList">
-          <li>cristinacoding@gmail.com</li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Socials</h2>
-        <ul>
-          <li>
-            <a href="https://twitter.com/cristinacoding" target="_blank">twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/cristinacoding" target="_blank">github</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/cristinacoding" target="_blank">linkedin</a>
-          </li>
+          <li><a href="mailto:cristinacoding@gmail.com">cristinacoding@gmail.com</a></li>
+          <li><a href="https://twitter.com/cristinacoding" target="_blank">twitter</a></li>
+          <li><a href="https://github.com/cristinacoding" target="_blank">github</a></li>
+          <li><a href="https://linkedin.com/in/cristinacoding" target="_blank">linkedin</a></li>
         </ul>
       </div>
     </section>

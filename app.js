@@ -62,21 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.setAttribute("aria-expanded", isOpen); // Update aria-expanded attribute
 
     if (isOpen) {
+      document.body.style.overflow = "hidden";
       overlay.style.display = "flex";
       overlay.querySelector("a").focus(); // Set initial focus to the first link
-      document.body.style.overflow = "hidden";
-      content.style.pointerEvents = "none";
       content.style.userSelect = "none";
       setTimeout(() => {
         overlay.style.opacity = "1";
         trapFocus(overlay);
       }, 25);
     } else {
+      document.body.style.overflow = "auto";
       overlay.style.opacity = "0";
       setTimeout(() => {
         overlay.style.display = "none";
-        document.body.style.overflow = "auto";
-        content.style.pointerEvents = "auto";
         content.style.userSelect = "auto";
         releaseFocus();
       }, 400); // Adjust timing to match transition duration in CSS
