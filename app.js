@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!boxes.length) return;
 
     // Split the children into two groups: the first two elements and the rest
-    const [firstTwo, rest] = [Array.from(boxes).slice(0, 2), Array.from(boxes).slice(2)];
+    const [firstTwo, rest] = [Array.from(boxes).slice(0, 3), Array.from(boxes).slice(3)];
     animateTogether(firstTwo, 0);
     setTimeout(() => animateTogether(rest, 0), 300);
     rest[rest.length - 1].addEventListener("animationend", sparkleAppear);
   }
 
   function animateTogether(elements, delay) {
-    elements.forEach((el) => (el.style.animation = `fadeSlideDown 0.4s ease-out forwards ${delay}s`));
+    elements.forEach((el) => (el.style.animation = `fadeSlideDown 700ms ease-out forwards ${delay}s`));
   }
 
   // Sparkle Appear
