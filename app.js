@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let isOpen = false; // Initialize isOpen variable
 
-  // Show All Scrollbar after confirming user has javascript enabled and can view site content
+  // Show Scrollbar after confirming user has javascript enabled and can view site content
   window.addEventListener("load", function () {
     document.body.style.overflowY = "auto";
     setTimeout(animateBoxes, 150);
